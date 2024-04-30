@@ -1,0 +1,40 @@
+<div class="modal-content">
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Datos Cliente</h4>
+    <button
+      type="button"
+      class="btn-close"
+      data-bs-dismiss="modal"
+      aria-label="Close"
+      (click)="closeModal()"
+    ></button>
+  </div>
+  <div class="modal-body">
+    <h2 class="fs-6"><b>ID: </b> {{ cliente.id }}</h2>
+    <h2 class="fs-6"><b>Nombres: </b> {{ cliente.nombres }}</h2>
+    <h2 class="fs-6"><b>Apellidos: </b> {{ cliente.apellidos }}</h2>
+    <h2 class="fs-6">
+      <b>Fecha Nac: </b>{{ cliente.fechaNac | date : "dd/MM/yyyy" }}
+    </h2>
+    <h2 class="fs-6"><b>CUIT: </b>{{ cliente.cuit }}</h2>
+    <h2 class="fs-6"><b>Domicilio: </b>{{ cliente.domicilio }}</h2>
+    <h2 class="fs-6"><b>Telefono: </b>{{ cliente.telefono }}</h2>
+    <h2 class="fs-6"><b>Email: </b>{{ cliente.email }}</h2>
+  </div>
+  <div class="modal-footer">
+    <button
+      type="button"
+      class="btn btn-secondary"
+      data-bs-dismiss="modal"
+      (click)="closeModal()"
+    >
+      Cerrar
+    </button>
+    <button type="button" class="btn btn-warning" (click)="editarCliente()">
+      Editar
+    </button>
+    <button type="button" class="btn btn-danger" (click)="borrarCliente()">
+      Borrar
+    </button>
+  </div>
+</div>
