@@ -22,6 +22,6 @@ export class ListClientesComponent {
 
   openModal(id: number) {
     const modalRef = this.modalService.open(DetailClienteComponent);
-    modalRef.componentInstance.idCliente = id; // Manda el id hacia DetailComponent a través de @Input
+    modalRef.componentInstance.idCliente = id; // Manda el id hacia DetailComponent a traves de @Input
   }
 }
